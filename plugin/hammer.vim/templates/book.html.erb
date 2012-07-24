@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="<%= File.join(Hammer::ENV.stylesheet_path, 'book.css') %>"> </link>  
+		<title>Preview</title>
+	</head>
+
+	<body>
+		<article>
+		<%= yield %>
+		</article>
+	</body>
+
+</html>
+

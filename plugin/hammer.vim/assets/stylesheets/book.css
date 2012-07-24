@@ -1,0 +1,73 @@
+body {
+	background: #F8F8F8 url('../images/book/noise.png') top left;
+	font-size: 18px;
+	font-family: 'Crimson Text', 'Palatino', 'Georgia', serif;
+	line-height: 1.4em;
+	color: #222;
+}
+
+article {
+	max-width: 33em;
+	padding: 1.618em;
+	margin: 0 auto;
+}
+
+a {
+	color: #fc263a;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	transition: all 0.25s
+}
+
+a:hover,a:visited:hover {
+	color: #b90314
+}
+
+a:visited {
+	color: #fd717f
+}
+
+article h1,article h2,article h3,article h4,article h5 {
+	font-weight: normal;
+	color: black
+}
+
+article h1 {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+article h2 {
+	padding-top: 0.8em;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') top left repeat-x;
+	font-size: 1.5em
+}
+
+article h3 {
+	font-weight: normal;
+}
+
+article h4 {
+	font-size: 1em;
+	font-style: italic
+}
+
+article h5 {
+	font-style: normal
+}
+
+article blockquote, article pre {
+	margin: 0;
+	padding-left: 1em;
+	border-left: 1px solid #aaa
+}
+
+article img,article object,article video,article audio,article figure,article iframe {
+	max-width: 100%
+}
+
+pre, code {
+	font-size: 15px;
+	line-height: 1.4em;
+}
