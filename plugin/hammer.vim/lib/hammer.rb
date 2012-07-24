@@ -105,18 +105,24 @@ module Hammer
         return nil
       end
 
-      unless GitHub::Markup.can_render?(buffer.basename)
+      basename = buffer.basename
+      if buffer.extname == ''
+        # render as markdown if file has no extension
+        basename += '.markdown'
+      end
+
+      unless GitHub::Markup.can_render?(basename)
         msg = "Cannot render '#{buffer.extname}' files. Missing renderer?"
         Vim.message(msg)
         return nil
       end
 
-      path = File.join Hammer::ENV.directory, "#{buffer.basename}.html"
+      path = File.join Hammer::ENV.directory, "#{basename}.html"
 
       File.open path, 'w' do |f|
         tilt = Tilt.new(Hammer::ENV.template)
         output = tilt.render do
-          GitHub::Markup.render(buffer.basename, buffer[1..-1])
+          GitHub::Markup.render(basename, buffer[1..-1])
         end
 
         f.write(output)
